@@ -1,0 +1,81 @@
+.line-chart-wrapper {
+  background-color: #1f2937; /* Dark background */
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.line-chart-wrapper h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #fbbf24; /* Bright yellow heading */
+}
+
+/* Axis tick text */
+.recharts-cartesian-axis-tick-value {
+  fill: #d1d5db !important; /* Light gray text for dark theme */
+  font-size: 12px;
+}
+
+/* Tooltip styles */
+.recharts-tooltip-wrapper {
+  font-size: 13px;
+  color: white;
+}
+
+.recharts-tooltip-label {
+  font-weight: bold;
+  color: #facc15 !important; /* Bright yellow label */
+}
+
+.recharts-default-tooltip {
+  background-color: #111827 !important; /* Dark tooltip */
+  border: 1px solid #374151 !important;
+  border-radius: 6px;
+  padding: 10px;
+  color: #e5e7eb !important;
+}
+
+/* Grid lines */
+.recharts-cartesian-grid line {
+  stroke: #4b5563 !important; /* Subtle dark gray grid */
+}
+
+/* Line stroke */
+.recharts-line-curve {
+  stroke: #3b82f6 !important; /* Blue line */
+  stroke-width: 3;
+}
+
+/* Data point dots */
+.recharts-dot {
+  fill: #10b981 !important; /* Green dots */
+  r: 4;
+}
+
+/* Bottom note */
+.chart-note {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-top: 12px;
+  text-align: left;
+}
+.recharts-wrapper {
+  background-color: #1f2937; /* Dark chart background */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recharts-surface {
+  background-color: #1f2937; /* Ensure inner chart SVG area is dark */
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  stroke: #4b5563 !important; /* Dark grid & axis lines */
+}
+

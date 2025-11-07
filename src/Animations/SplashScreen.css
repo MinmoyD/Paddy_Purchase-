@@ -1,0 +1,38 @@
+/* src/components/SplashScreen.css */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.splash-screen.hide {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+.splash-icon {
+  font-size: 4rem;
+  animation: zoomIn 1.2s ease;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

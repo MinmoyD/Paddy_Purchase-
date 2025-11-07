@@ -1,0 +1,61 @@
+/* src/App.css */
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+}
+
+.dark {
+  --bg-color: #111827;
+  --text-color: #ffffff;
+  --card-bg: #1f2937;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  width: 100vw;
+}
+
+.app-container {
+  margin-left: 250px; /* To avoid overlapping with the fixed sidebar */
+  padding: 20px;
+}
+
+
+.main-content {
+  /* width: 100vw; */
+    flex: 1;
+    padding: 20px;
+    padding-top: 70px;
+    /* background-color: var(--bg-color); */
+    color: var(--text-color);
+    height: 100vh;
+}
+
+.top-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.mode-toggle {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.mode-toggle:hover {
+  background: #2563eb;
+}

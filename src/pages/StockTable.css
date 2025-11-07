@@ -1,0 +1,333 @@
+:root {
+  --sidebar-width: 250px;
+  --navbar-height: 90px;
+}
+
+/* === Base Reset === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  background: #0f0f0f;
+}
+
+/* === Container === */
+.stock-container {
+  margin-left: var(--sidebar-width);
+  margin-top: var(--navbar-height);
+  padding: 40px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  border-radius: 24px;
+  color: #f9fafb;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease-in-out;
+  min-height: calc(100vh - var(--navbar-height));
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.stock-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8);
+}
+
+/* === Title === */
+.stock-title {
+  font-size: 28px;
+  font-weight: 900;
+  padding: 24px 32px;
+  margin-bottom: 36px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6, #60a5fa);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* === Table === */
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  background: #111827;
+  border-radius: 12px;
+  table-layout: fixed;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 18px 22px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.stock-table th {
+  background-color: #1f2937;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.stock-table tbody tr:hover {
+  background-color: #27303f;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* === Filters === */
+.stock-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.stock-filters label {
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.stock-filters input[type="date"] {
+  padding: 10px 16px;
+  border: 1px solid #4b5563;
+  background: #1f2937;
+  color: #f9fafb;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.stock-filters input[type="date"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+}
+
+/* === Buttons === */
+.stock-filters button,
+.stock-show-more-button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.stock-filters button:hover,
+.stock-show-more-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.stock-filters button:active,
+.stock-show-more-button:active {
+  transform: scale(0.96);
+}
+
+/* === Spinner === */
+.stock-loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+
+.stock-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #374151;
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Summary Box === */
+.stock-summary-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  color: #f9fafb;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.stock-summary-box strong {
+  color: #65d7c7;
+}
+
+/* === Verified Badge === */
+.stock-verified-badge {
+  background-color: #16a34a;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: #f0fdf4;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+}
+
+/* === Text === */
+.stock-text {
+  color: #d1d5db;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .stock-container {
+    padding: 24px;
+    margin-left: 0;
+  }
+
+  .stock-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .stock-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stock-summary-box {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+}
+
+/* === Scrollbar Hiding (Webkit Only) === */
+::-webkit-scrollbar {
+  display: none;
+}
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #00c0ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 🔒 Modal Overlay */
+.modal-overlay {
+  /* position: fixed; */
+  top: 60px; /* shift below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px); /* reduce height so it centers correctly */
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* 🔒 Modal Box */
+.modal {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+  width: 300px;
+  height: 132px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #0d6efd;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.modal-actions button:hover {
+  background: #0b5ed7;
+}
+.warehouse-form select {
+  background: #1e1e1e; /* dark background */
+  color: #fff; /* white text */
+  border: 1px solid #444;
+  padding: 13px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  /* width: 100%; */
+  margin: 6px 6px ;
+  /* margin-bottom: 10px; */
+}
+
+/* Hover effect */
+.warehouse-form select:hover {
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+/* Focused (when clicked) */
+.warehouse-form select:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.7);
+}
+
+/* Dropdown options */
+.warehouse-form select option {
+  background: #1e1e1e; /* dropdown bg */
+  color: #fff; /* text */
+  padding: 10px;
+}

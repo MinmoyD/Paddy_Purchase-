@@ -1,0 +1,256 @@
+/* 🌑 Container */
+.warehouse-container {
+  background: #171818;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* 🏷️ Title */
+.warehouse-title {
+  background: linear-gradient(90deg, #0b0d0f, #466782);
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input{
+  width: 96%;
+    background: #343f48;
+    padding: 11px;
+    color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+/* 📋 Table */
+.warehouse-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.warehouse-table th,
+.warehouse-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.warehouse-table thead {
+  background: #222;
+  color: #bbb;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.warehouse-table tbody tr {
+  transition: background 0.2s;
+}
+
+.warehouse-table tbody tr:hover {
+  background: #1f1f1f;
+}
+
+.warehouse-table td {
+  color: #eee;
+}
+
+/* ✅ Verified badge */
+.verified-badge {
+  display: inline-block;
+  background: #4caf50;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* 🔎 Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filters input,
+.filters button {
+  padding: 6px 10px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filters input[type="date"],
+.filters input[type="number"],
+.warehouse-form input {
+  background: #222;
+  color: #fff;
+}
+
+.filters input:focus {
+  outline: none;
+  border-color: #0d6efd;
+}
+
+/* 🎛️ Buttons */
+.filters button,
+.show-more-button,
+.warehouse-form button {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.filters button:hover,
+.show-more-button:hover,
+.warehouse-form button:hover {
+  background: #0b5ed7;
+  transform: scale(1.03);
+}
+
+/* 📊 Summary */
+.summary-box {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ⏳ Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.spinner {
+  border: 6px solid #333;
+  border-top: 6px solid #0d6efd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .warehouse-container {
+    padding: 16px;
+    margin: 10px;
+  }
+
+  .warehouse-title {
+    font-size: 18px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .summary-box {
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+/* 🎛️ Buttons (Modern Style) */
+.filters button,
+.show-more-button,
+.warehouse-form button {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 15%;
+  height: 10%;
+  margin-left: 20px;
+    margin-top: 22px;
+  /* padding: 8px 18px; */
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+  transition: all 0.25s ease;
+}
+
+.filters button:hover,
+.show-more-button:hover,
+.warehouse-form button:hover {
+  background: linear-gradient(135deg, #0b5ed7, #084298);
+  box-shadow: 0 6px 14px rgba(13, 110, 253, 0.35);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.filters button:active,
+.show-more-button:active,
+.warehouse-form button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 6px rgba(13, 110, 253, 0.2);
+}
+
+.filters button:disabled,
+.show-more-button:disabled,
+.warehouse-form button:disabled {
+  background: #444;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* 🔽 Custom Select Dropdown */
+.warehouse-form select {
+  background: #1e1e1e; /* dark background */
+  color: #fff; /* white text */
+  border: 1px solid #444;
+  padding: 13px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  /* width: 100%; */
+  margin: 6px 6px ;
+  /* margin-bottom: 10px; */
+}
+
+/* Hover effect */
+.warehouse-form select:hover {
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+/* Focused (when clicked) */
+.warehouse-form select:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.7);
+}
+
+/* Dropdown options */
+.warehouse-form select option {
+  background: #1e1e1e; /* dropdown bg */
+  color: #fff; /* text */
+  padding: 10px;
+}

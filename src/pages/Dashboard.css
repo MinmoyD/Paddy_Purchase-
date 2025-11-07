@@ -1,0 +1,166 @@
+.dashboard {
+  flex: 1;
+  padding: 30px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* Dashboard.css */
+
+/* GENERAL DARK MODE */
+.dashboard {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+.dashboard .navbar {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* CARDS ROW */
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* STAT CARD */
+.cards-row .stat-card {
+  flex: 1 1 220px; /* minimum width for card */
+  background-color: #1e1e1e;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-row .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.stat-card .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.stat-card .description {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+/* COLOR CLASSES FOR CARDS */
+.bg-dark {
+  background: #1a1a1a;
+  border-left: 4px solid #666;
+}
+
+.bg-blue {
+  background: #1a1a2e;
+  border-left: 4px solid #3b82f6;
+}
+
+.bg-pink {
+  background: #2e1a2e;
+  border-left: 4px solid #ec4899;
+}
+
+.bg-yellow {
+  background: #2e2a1a;
+  border-left: 4px solid #facc15;
+}
+
+/* CHART BOX */
+.chart-box {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* STOCK CHART ROW */
+.stock-chart-row,
+.warehouse-stock-row {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* SPINNER CENTERING */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .cards-row {
+    gap: 0.75rem;
+  }
+}
+
+/* Small devices (mobiles, 480px and up) */
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    flex: 1 1 100%;
+  }
+
+  .chart-box,
+  .stock-chart-row,
+  .warehouse-stock-row {
+    padding: 0.75rem;
+  }
+}
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 0.5rem;
+  }
+
+  .stat-card .title {
+    font-size: 1rem;
+  }
+
+  .stat-card .value {
+    font-size: 1.5rem;
+  }
+
+  .stat-card .description {
+    font-size: 0.75rem;
+  }
+
+  .chart-box,
+  .stock-chart-row,
+  .warehouse-stock-row {
+    padding: 0.5rem;
+  }
+}
