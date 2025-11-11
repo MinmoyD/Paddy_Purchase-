@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api': 'https://paddy-login-backend.vercel.app',
     },
     allowedHosts: ["4e5c3e4f49ad.ngrok-free.app"],
     host: true,
