@@ -76,7 +76,7 @@ const Lab = () => {
     }
 
     try {
-      await axios.delete(`http://paddy-backend-lab.vercel.app/api/labform/${deleteId}`);
+      await axios.delete(`https://paddy-backend-lab.vercel.app/api/labform/${deleteId}`);
       setLabData((prev) => prev.filter((item) => item._id !== deleteId));
       toast.success("Deleted !!");
     } catch (error) {
@@ -116,7 +116,7 @@ const Lab = () => {
 
       await Promise.all(
         entriesWithCarNo.map((entry) =>
-          axios.post("http://paddy-backend-lab.vercel.app/api/labform", entry)
+          axios.post("https://paddy-backend-lab.vercel.app/api/labform", entry)
         )
       );
 
