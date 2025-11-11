@@ -19,7 +19,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://https://paddy-login-backend.vercel.app/api/login", logData, {
+      const res = await axios.post("https://paddy-login-backend.vercel.app/api/login", logData, {
         withCredentials: true,
       });
       navigate("/dashboard"); // ✅ redirect on success

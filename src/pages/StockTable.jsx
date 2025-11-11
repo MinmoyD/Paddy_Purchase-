@@ -5,7 +5,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import Navbar from "../components/Navbar";
 
-const API_URL = "http://car-qr-stock-backend.vercel.app/api/stocks/all"; // stock API
+const API_URL = "https://car-qr-stock-backend.vercel.app/api/stocks/all"; // stock API
 const SECURITY_PIN = "1234"; // change this to your desired PIN
 
 function StockTable() {
@@ -158,7 +158,7 @@ function StockTable() {
       return;
     }
     try {
-      const res = await fetch("http://car-qr-stock-backend.vercel.app/api/stocks", {
+      const res = await fetch("https://car-qr-stock-backend.vercel.app/api/stocks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(pendingData),

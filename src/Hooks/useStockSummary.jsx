@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const STOCKS_API = "http://car-qr-stock-backend.vercel.app/api/stocks/all"; // base stock
-const SCANS_API = "http://car-qr-stock-backend.vercel.app/api/scans";       // production/scans
+const STOCKS_API = "https://car-qr-stock-backend.vercel.app/api/stocks/all"; // base stock
+const SCANS_API = "https://car-qr-stock-backend.vercel.app/api/scans";       // production/scans
 
 const BAG_WEIGHT_KG = 60;     // 1 bag = 60 kg
 const KG_PER_QUINTAL = 100;   // 1 qtl = 100 kg

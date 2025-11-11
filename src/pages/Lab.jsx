@@ -136,7 +136,7 @@ const Lab = () => {
 
     try {
       const res = await axios.get(
-        `http://paddy-backend-lab.vercel.app/api/labform?carNo=${car.carNo}`
+        `https://paddy-backend-lab.vercel.app/api/labform?carNo=${car.carNo}`
       );
 
       const detailedEntries = res.data.filter(

@@ -16,7 +16,7 @@ const StockChartCard = () => {
   // ✅ Fetch raw stock records
   const fetchStockData = async () => {
     try {
-      const res = await axios.get("http://car-qr-stock-backend.vercel.app/api/stocks/all");
+      const res = await axios.get("https://car-qr-stock-backend.vercel.app/api/stocks/all");
       setRawData(res.data || []);
     } catch (error) {
       console.error("Error fetching stock data:", error);

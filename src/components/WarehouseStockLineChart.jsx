@@ -52,8 +52,8 @@ const WarehouseStockLineChart = () => {
   const fetchStockData = async () => {
     try {
       const [stockRes, scansRes] = await Promise.all([
-        axios.get("http://car-qr-stock-backend.vercel.app/api/stocks/all"),
-        axios.get("http://car-qr-stock-backend.vercel.app/api/scans"),
+        axios.get("https://car-qr-stock-backend.vercel.app/api/stocks/all"),
+        axios.get("https://car-qr-stock-backend.vercel.app/api/scans"),
       ]);
 
       const stocks = Array.isArray(stockRes.data) ? stockRes.data : [];
