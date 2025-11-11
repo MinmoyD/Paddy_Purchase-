@@ -11,7 +11,7 @@ import useWarehouseData from "../Hooks/useWarehouseData";
 import useCarArrivalCount from "../Hooks/useCarArrivalCount";
 
 import Spinner from "../components/Spinner";
-import "../pages/Dashboard.css";
+import "./Dashboard.css";
 // import Chatbot from "../components/Chatbot";
 
 const Dashboard = () => {
