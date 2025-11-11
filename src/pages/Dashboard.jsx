@@ -12,7 +12,7 @@ import useCarArrivalCount from "../Hooks/useCarArrivalCount";
 
 import Spinner from "../components/Spinner";
 import "../pages/Dashboard.css";
-import Chatbot from "../components/Chatbot";
+// import Chatbot from "../components/Chatbot";
 
 const Dashboard = () => {
   const { totalBags, totalWeight, loading: stockLoading } = useStockSummary();
@@ -25,7 +25,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Navbar />
-      <Chatbot/>
+      {/* <Chatbot/> */}
       <div className="cards-row">
         {/* Stock Card */}
         <StatCard
