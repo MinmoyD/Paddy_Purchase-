@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useUserName = () => {
     const [userName, setUserName] = useState('Guest');
-    const API_URL = "http://localhost:3000/api/users";
+    const API_URL = "https://paddy-login-backend.vercel.app/api/users";
 
     useEffect(() => {
         const fetchUserName = async () => {
