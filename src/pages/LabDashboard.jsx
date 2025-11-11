@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Chatbot from "../components/Chatbot"
+// import Chatbot from "../components/Chatbot"
 import {
   PieChart,
   Pie,
@@ -206,7 +206,7 @@ const LabDashboard = () => {
   return (
     <div className="lab-dashboard">
       <Navbar />
-      <Chatbot/>
+      {/* <Chatbot/> */}
 
       <h2 className="title">📊 Lab Quality Dashboard</h2>
 
