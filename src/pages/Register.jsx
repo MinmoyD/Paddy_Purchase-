@@ -51,7 +51,7 @@ function Register() {
     try {
       setLoading(true);
       setShowError(false); // reset error
-      const res = await axios.post("http://localhost:3000/api/register", formsdata);
+      const res = await axios.post("http://https://paddy-login-backend.vercel.app/api/register", formsdata);
 
       console.log("✅ Successful", res.data);
       setFormsdata({ name: "", email: "", password: "" });

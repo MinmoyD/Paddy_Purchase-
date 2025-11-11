@@ -1,7 +1,7 @@
 // src/hooks/useWarehouseTableData.js
 import { useState, useEffect } from "react";
 
-const API_URL = "http://localhost:5000/api/scans"; // GET endpoint
+const API_URL = "http://car-qr-stock-backend.vercel.app/api/scans"; // GET endpoint
 
 export default function useWarehouseTableData() {
   const [totals, setTotals] = useState({

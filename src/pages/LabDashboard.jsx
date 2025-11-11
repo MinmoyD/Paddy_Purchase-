@@ -33,7 +33,7 @@ const LabDashboard = () => {
   // 📌 Fetch Data from Backend
   useEffect(() => {
     axios
-      .get("http://localhost:4010/api/labform")
+      .get("http://paddy-backend-lab.vercel.app/api/labform")
       .then((res) => {
         setLabData(res.data);
         calculateStats(res.data);

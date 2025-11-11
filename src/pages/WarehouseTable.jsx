@@ -5,7 +5,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import Navbar from "../components/Navbar";
 
-const API_URL = "http://localhost:5000/api/scans";
+const API_URL = "http://car-qr-stock-backend.vercel.app/api/scans";
 const ADMIN_PIN = "1234"; 
 
 function WarehouseTable() {
